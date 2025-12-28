@@ -1,16 +1,45 @@
-# React + Vite
+# Pesquisa sobre uso de IA na educação – PECS/UEMA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web feita com **React + Vite** para coletar, de forma anônima, dados sobre o uso de ferramentas de inteligência artificial por **alunos** e **professores** da Universidade Estadual do Maranhão (UEMA).
 
-Currently, two official plugins are available:
+O objetivo é apoiar uma pesquisa de mestrado em Engenharia da Computação (PECS), analisando como a IA vem sendo utilizada no contexto educacional e quais percepções a comunidade acadêmica tem sobre seu impacto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Página inicial com:
+  - Apresentação da pesquisa e aviso de anonimato das respostas.
+  - Escolha de perfil: **Aluno(a)** ou **Professor(a)**.
+  - Seção “Quem é o pesquisador?” com informações de contato.
 
-## Expanding the ESLint configuration
+- Formulário para **alunos**:
+  - Identificação acadêmica (curso, período).
+  - Perguntas sobre uso de IA em atividades, trabalhos e provas.
+  - Percepção sobre impacto da IA no aprendizado e aspectos éticos.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Formulário para **professores**:
+  - Identificação acadêmica (curso/departamento).
+  - Uso de IA no planejamento de aulas e elaboração de avaliações.
+  - Visão sobre o uso de IA por estudantes dentro e fora da sala de aula.
+
+- Armazenamento das respostas em banco **MySQL** via API em **PHP**, hospedada no cPanel.
+
+---
+
+## Tecnologias utilizadas
+
+- **Front-end**
+  - React + Vite
+  - React Router DOM
+  - CSS puro (layout institucional reutilizável)
+  - Ícones: `lucide-react`
+
+- **Back-end**
+  - PHP (endpoints REST simples)
+  - MySQL (armazenamento das respostas)
+  - Hospedagem em servidor compartilhado com cPanel
+
+---
+
+## Utilização do projeto não autorizada
