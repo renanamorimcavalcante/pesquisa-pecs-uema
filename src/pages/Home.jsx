@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../layout.css'
 import { Instagram, Linkedin } from 'lucide-react'
@@ -5,6 +6,20 @@ import { Instagram, Linkedin } from 'lucide-react'
 
 function Home() {
   const navigate = useNavigate()
+
+  useEffect(() => {
+    async function trackVisit() {
+      try {
+        await fetch('http://sh00040.teste.website/~renan675/api/track_visit.php', {
+          method: 'POST',
+        })
+      } catch {
+        // silencioso, pra não impactar o usuário
+      }
+    }
+
+    trackVisit()
+  }, [])
 
   return (
     <>
@@ -70,50 +85,49 @@ function Home() {
           </div>
 
           <section className="researcher-section">
-  <div className="researcher-avatar-wrapper">
-    <img
-      src="/me.jpg"
-      alt="Foto do pesquisador Renan Cavalcante"
-      className="researcher-avatar"
-    />
-  </div>
+            <div className="researcher-avatar-wrapper">
+              <img
+                src="/me.jpg"
+                alt="Foto do pesquisador Renan Cavalcante"
+                className="researcher-avatar"
+              />
+            </div>
 
-  <div className="researcher-info">
-    <p className="researcher-title">Quem é o pesquisador?</p>
-    <p className="researcher-text">
-      Esta pesquisa está sendo conduzida por <strong>Renan Cavalcante</strong>.
-    </p>
-    <p className="researcher-bio">
-      Consultor técnico e desenvolvedor ServiceNow, 35 anos, mestrando em Engenharia da Computação (PECS) 
-      na Universidade Estadual do Maranhão. Pai da Maria Sofia e do Pedro Levi e casado com Rafaela Cavalcante, 
-      é apaixonado por tecnologia, transformação digital e música, pesquisando e promovendo o uso responsável da 
-      inteligência artificial na educação no Brasil.
-    </p>
+            <div className="researcher-info">
+              <p className="researcher-title">Quem é o pesquisador?</p>
+              <p className="researcher-text">
+                Esta pesquisa está sendo conduzida por <strong>Renan Cavalcante</strong>.
+              </p>
+              <p className="researcher-bio">
+                Consultor técnico e desenvolvedor ServiceNow, 35 anos, mestrando em Engenharia da
+                Computação (PECS) na Universidade Estadual do Maranhão. Pai da Maria Sofia e do Pedro
+                Levi e casado com Rafaela Cavalcante, é apaixonado por tecnologia, transformação
+                digital e música, pesquisando e promovendo o uso responsável da inteligência
+                artificial na educação no Brasil.
+              </p>
 
-   <div className="researcher-links">
-  <a
-    className="researcher-link"
-    href="https://www.instagram.com/iamrenancavalcante/"
-    target="_blank"
-    rel="noreferrer"
-  >
-    <Instagram size={16} strokeWidth={1.8} />
-    <span>Instagram</span>
-  </a>
-  <a
-    className="researcher-link"
-    href="https://www.linkedin.com/in/renan-acavalcante/"
-    target="_blank"
-    rel="noreferrer"
-  >
-    <Linkedin size={16} strokeWidth={1.8} />
-    <span>LinkedIn</span>
-  </a>
-</div>
-
-  </div>
-</section>
-
+              <div className="researcher-links">
+                <a
+                  className="researcher-link"
+                  href="https://www.instagram.com/iamrenancavalcante/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Instagram size={16} strokeWidth={1.8} />
+                  <span>Instagram</span>
+                </a>
+                <a
+                  className="researcher-link"
+                  href="https://www.linkedin.com/in/renan-acavalcante/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Linkedin size={16} strokeWidth={1.8} />
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
+          </section>
 
           <p className="app-footer-note">
             Os dados coletados serão utilizados exclusivamente para fins acadêmicos, de forma
