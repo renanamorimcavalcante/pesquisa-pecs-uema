@@ -1,0 +1,236 @@
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.app-card {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 32px 24px;
+  border-radius: var(--radius-lg);
+  background: var(--card-bg);
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+/* Cabeçalho */
+.app-header {
+  margin-bottom: 24px;
+}
+
+.app-tagline {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.app-title {
+  font-size: 28px;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.app-subtitle {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* Grid de opções */
+.app-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* Botão-card */
+.card-button {
+  padding: 18px 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.15s ease-out, border-color 0.15s ease-out,
+    transform 0.12s ease-out;
+  color: var(--text-main);
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.card-button:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+.card-button:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Variações apenas na cor de destaque */
+.card-button--blue {
+  border-left: 3px solid #2563eb;
+}
+
+.card-button--green {
+  border-left: 3px solid #16a34a;
+}
+
+/* Chips */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.chip--blue {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.chip--green {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+/* Conteúdo do card */
+.card-title {
+  margin: 0 0 4px 0;
+  font-size: 17px;
+}
+
+.card-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* Rodapé */
+.app-footer-note {
+  margin-top: 22px;
+  padding-top: 10px;
+  font-size: 11px;
+  color: #6b7280;
+  text-align:center;
+  border-top: 1px solid #e5e7eb;
+}
+.page-footer {
+  margin-top: 8px;
+  padding: 12px 16px 24px;
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.form-section {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px 18px 12px;
+  background-color: #f9fafb;
+}
+
+.form-section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.form-field label {
+  font-size: 13px;
+  color: #111827;
+}
+
+.form-field input,
+.form-field select {
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+  border-color: #2563eb;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.btn-primary:not(:disabled):hover {
+  background-color: #1d4ed8;
+}
+
+.btn-secondary {
+  background-color: #f3f4f6;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.btn-secondary:hover {
+  background-color: #e5e7eb;
+}
+
+.form-message {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #065f46;
+}
+
