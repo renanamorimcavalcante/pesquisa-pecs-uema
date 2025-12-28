@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../layout.css'
 
-const API_URL = 'http://sh00040.teste.website/~renan675/api/save_student.php' // troque pela sua URL real
+//const API_URL = 'http://sh00040.teste.website/~renan675/api/save_student.php' // troque pela sua URL real
+const API_URL = 'https://bushidoacademia.com.br/api/save_student.php'
 
 function StudentForm() {
   const navigate = useNavigate()

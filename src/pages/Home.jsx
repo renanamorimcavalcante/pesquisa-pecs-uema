@@ -10,7 +10,7 @@ function Home() {
   useEffect(() => {
     async function trackVisit() {
       try {
-        await fetch('http://sh00040.teste.website/~renan675/api/track_visit.php', {
+        await fetch('https://bushidoacademia.com.br/api/track_visit.php', {
           method: 'POST',
         })
       } catch {

@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../layout.css'
 
-const API_URL = 'http://sh00040.teste.website/~renan675/api/get_stats.php' // ajuste para sua URL real
+//const API_URL = 'http://sh00040.teste.website/~renan675/api/get_stats.php' // ajuste para sua URL real
+const API_URL = 'https://bushidoacademia.com.br/api/get_stats.php'
 
 function Admin() {
   const navigate = useNavigate()
