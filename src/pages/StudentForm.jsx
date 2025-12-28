@@ -203,7 +203,8 @@ function StudentForm() {
 
               <div className="form-field">
                 <label htmlFor="percebe_impacto_aprendizado">
-                  4 - De forma geral, como você percebe o impacto do uso de IA no seu aprendizado?
+                  4 - De forma geral, como você sente que o uso de IA impacta o que você realmente aprende 
+                  nas aulas e para a sua memória do conteúdo?
                 </label>
                 <select
                   id="percebe_impacto_aprendizado"
@@ -224,7 +225,7 @@ function StudentForm() {
               <div className="form-field">
                 <label htmlFor="percepcao_etica">
                   5 - Na sua opinião, utilizar IA em trabalhos e atividades acadêmicas quando o
-                  professor não solicita explicitamente é:
+                  professor não solicita explicitamente é: (Por exemplo, pedir para a IA escrever o texto e você só copiar.)
                 </label>
                 <select
                   id="percepcao_etica"
@@ -235,7 +236,7 @@ function StudentForm() {
                 >
                   <option value="">Selecione uma opção</option>
                   <option value="CORRETO">Correto</option>
-                  <option value="DEPENDE">Depende da situação</option>
+                  <option value="DEPENDE">Não pensei sobre o assunto</option> /* Corrigir no Banco de dados */
                   <option value="INCORRETO">Incorreto</option>
                 </select>
               </div>
