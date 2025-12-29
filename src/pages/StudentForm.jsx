@@ -175,7 +175,7 @@ function StudentForm() {
                   <option value="">Selecione uma opção</option>
                   <option value="SIM">Sim</option>
                   <option value="NAO">Não</option>
-                  <option value="PREFIRO_NAO_RESPONDER">Prefiro não responder</option>
+                  {/* <option value="PREFIRO_NAO_RESPONDER">Prefiro não responder</option> */}
                 </select>
               </div>
 
@@ -196,8 +196,8 @@ function StudentForm() {
                   <option value="CONHECO_QUEM_JA_USOU">
                     Não usei, mas conheço quem já usou
                   </option>
-                  <option value="NAO">Não</option>
-                  <option value="PREFIRO_NAO_RESPONDER">Prefiro não responder</option>
+                  <option value="NAO">Não, nunca usei</option>
+                   {/* <option value="PREFIRO_NAO_RESPONDER">Prefiro não responder</option> */}
                 </select>
               </div>
 
@@ -216,7 +216,7 @@ function StudentForm() {
                   <option value="">Selecione uma opção</option>
                   <option value="MUITO_NEGATIVO">Muito negativo</option>
                   <option value="NEGATIVO">Mais negativo do que positivo</option>
-                  <option value="NEUTRO">Neutro</option>
+                  <option value="NEUTRO">Não sei dizer</option>
                   <option value="POSITIVO">Mais positivo do que negativo</option>
                   <option value="MUITO_POSITIVO">Muito positivo</option>
                 </select>
@@ -224,8 +224,7 @@ function StudentForm() {
 
               <div className="form-field">
                 <label htmlFor="percepcao_etica">
-                  5 - Na sua opinião, utilizar IA em trabalhos e atividades acadêmicas quando o
-                  professor não solicita explicitamente é: (Por exemplo, pedir para a IA escrever o texto e você só copiar.)
+                  5 - Na sua opinião, você acha que sem a utilização de IA nas atividades seu desempenho poderia ser impactado?
                 </label>
                 <select
                   id="percepcao_etica"
@@ -235,9 +234,9 @@ function StudentForm() {
                   required
                 >
                   <option value="">Selecione uma opção</option>
-                  <option value="CORRETO">Correto</option>
-                  <option value="DEPENDE">Não pensei sobre o assunto</option> /* Corrigir no Banco de dados */
-                  <option value="INCORRETO">Incorreto</option>
+                  <option value="SIM">Acho que sim</option>
+                  <option value="NAO_SEI">Não pensei sobre o assunto</option> {/* Corrigir no Banco de dados */}
+                  <option value="NAO">Não</option>
                 </select>
               </div>
             </fieldset>

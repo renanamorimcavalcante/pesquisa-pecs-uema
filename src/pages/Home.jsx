@@ -98,12 +98,12 @@ function Home() {
               <p className="researcher-text">
                 Esta pesquisa está sendo conduzida por <strong>Renan Cavalcante</strong>.
               </p>
-              <p className="researcher-bio">
-                Consultor técnico e desenvolvedor ServiceNow, 35 anos, mestrando em Engenharia da
+              <p className="researcher-bio">    
+                Consultor técnico Servicenow e Desenvolvedor, 35 anos, mestrando em Engenharia da
                 Computação (PECS) na Universidade Estadual do Maranhão. Pai da Maria Sofia e do Pedro
                 Levi e casado com Rafaela Cavalcante, é apaixonado por tecnologia, transformação
                 digital e música, pesquisando e promovendo o uso responsável da inteligência
-                artificial na educação no Brasil.
+                artificial na educação.
               </p>
 
               <div className="researcher-links">
