@@ -17,6 +17,9 @@ function StudentForm() {
     usou_ia_em_provas: '',
     percebe_impacto_aprendizado: '',
     percepcao_etica: '',
+    orientacao_escola: '',
+    orientacao_pais: '',
+    deseja_mais_orientacao: '',
   })
 
   const [loading, setLoading] = useState(false)
@@ -161,23 +164,35 @@ function StudentForm() {
               </div>
 
               <div className="form-field">
-                <label htmlFor="usou_ia_quando_proibido">
-                  2 - Você já utilizou IA em atividades ou trabalhos mesmo quando o professor não
-                  permitia?
-                </label>
-                <select
-                  id="usou_ia_quando_proibido"
-                  name="usou_ia_quando_proibido"
-                  value={form.usou_ia_quando_proibido}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="">Selecione uma opção</option>
-                  <option value="SIM">Sim</option>
-                  <option value="NAO">Não</option>
-                  {/* <option value="PREFIRO_NAO_RESPONDER">Prefiro não responder</option> */}
-                </select>
-              </div>
+  <label>
+    2 - Você já utilizou IA em atividades ou trabalhos mesmo quando o professor não permitia?
+  </label>
+  <div>
+    <label>
+      <input
+        type="radio"
+        name="usou_ia_quando_proibido"
+        value="SIM"
+        checked={form.usou_ia_quando_proibido === 'SIM'}
+        onChange={handleChange}
+        required
+      />
+      {' '}Sim
+    </label>
+    <label style={{ marginLeft: 16 }}>
+      <input
+        type="radio"
+        name="usou_ia_quando_proibido"
+        value="NAO"
+        checked={form.usou_ia_quando_proibido === 'NAO'}
+        onChange={handleChange}
+        required
+      />
+      {' '}Não
+    </label>
+  </div>
+</div>
+
 
               <div className="form-field">
                 <label htmlFor="usou_ia_em_provas">
@@ -239,7 +254,104 @@ function StudentForm() {
                   <option value="NAO">Não</option>
                 </select>
               </div>
+              
             </fieldset>
+            <fieldset className="form-section">
+          <legend className="form-section-title">Orientações sobre o uso de IA</legend>
+
+          <div className="form-field">
+            <label>
+              6 - Você já recebeu alguma orientação da escola onde estuda sobre como usar
+              ferramentas de inteligência artificial de forma saudável e responsável?
+            </label>
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  name="orientacao_escola"
+                  value="SIM"
+                  checked={form.orientacao_escola === 'SIM'}
+                  onChange={handleChange}
+                  required
+                />
+                {' '}Sim
+              </label>
+              <label style={{ marginLeft: 16 }}>
+                <input
+                  type="radio"
+                  name="orientacao_escola"
+                  value="NAO"
+                  checked={form.orientacao_escola === 'NAO'}
+                  onChange={handleChange}
+                  required
+                />
+                {' '}Não
+              </label>
+            </div>
+          </div>
+
+          <div className="form-field">
+            <label>
+              7 - Seus pais ou responsáveis conversam com você sobre como usar ferramentas
+              de inteligência artificial?
+            </label>
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  name="orientacao_pais"
+                  value="SIM"
+                  checked={form.orientacao_pais === 'SIM'}
+                  onChange={handleChange}
+                  required
+                />
+                {' '}Sim
+              </label>
+              <label style={{ marginLeft: 16 }}>
+                <input
+                  type="radio"
+                  name="orientacao_pais"
+                  value="NAO"
+                  checked={form.orientacao_pais === 'NAO'}
+                  onChange={handleChange}
+                  required
+                />
+                {' '}Não
+              </label>
+            </div>
+          </div>
+
+          <div className="form-field">
+            <label>
+              8 - Você gostaria que houvesse mais discussões e orientações sobre o uso saudável
+              de ferramentas de inteligência artificial na sua escola e em casa?
+            </label>
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  name="deseja_mais_orientacao"
+                  value="SIM"
+                  checked={form.deseja_mais_orientacao === 'SIM'}
+                  onChange={handleChange}
+                  required
+                />
+                {' '}Sim
+              </label>
+              <label style={{ marginLeft: 16 }}>
+                <input
+                  type="radio"
+                  name="deseja_mais_orientacao"
+                  value="NAO"
+                  checked={form.deseja_mais_orientacao === 'NAO'}
+                  onChange={handleChange}
+                  required
+                />
+                {' '}Não
+              </label>
+            </div>
+          </div>
+        </fieldset>
 
             <div className="form-actions">
               <button type="button" className="btn-secondary" onClick={() => navigate('/')}>
