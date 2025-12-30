@@ -69,7 +69,8 @@ function Home() {
               </p>
             </button>
 
-            <button
+
+            {/* <button
               type="button"
               // onClick={() => navigate('/professor')}
               onClick={() => navigate('/')}
@@ -81,7 +82,7 @@ function Home() {
                 Questionário sobre uso de IA no planejamento de aulas, elaboração de avaliações e
                 percepção do uso por estudantes.
               </p>
-            </button>
+            </button>  */}
           </div>
 
           <section className="researcher-section">
